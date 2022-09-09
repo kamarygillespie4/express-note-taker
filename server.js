@@ -21,9 +21,10 @@ app.use(express.json());
 
 //get request
 app.get("/api/notes", function(req, res) {
-    readFileAsync("/db/db.json", "utf-8").then(function(data) {
-        notes = [].concat(JSON.parse(data));
-        res.json(notes);
+    readFileAsync("/db/db.json").then(function(data) {
+        res.json(JSON.parse(data))
+            // notes = [].concat(JSON.parse(data));
+            // res.json(notes);
     })
 });
 
