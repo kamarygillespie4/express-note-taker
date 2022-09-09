@@ -18,6 +18,14 @@ app.use(express.json());
 // middleware
 app.use(express.static("/public"));
 
+//get request
+app.get("/api/notes", function(req, res) {
+    readFileAsync("/db/db.json", "utf-8").then(function(data) {
+        notes = [].concat(JSON.parse(data));
+        res.json(notes);
+    })
+});
+
 // post request
 app.post("/api/notes", function(req, res) {
     const note = req.body;
