@@ -63,11 +63,6 @@ app.get("/api/notes", function(req, res) {
         });
 });
 
-
-
-
-
-
 // Starts server to begin listening
 app.listen(PORT, function() {
     console.log("Server Running " + `http://localhost:${PORT}`);
