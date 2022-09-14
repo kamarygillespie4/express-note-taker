@@ -17,6 +17,18 @@ app.use(express.static("public"));
 //create db where the notes will be stored and refrenced
 let notes = require("./db/db.json");
 
+// created route to get notes.html file
+app.get("/notes", function(req, res) {
+    res.sendFile(path.join(__dirname, "public/notes.html"));
+});
+
+
+
+
+
+
+
+
 
 // Starts server to begin listening
 app.listen(PORT, function() {
