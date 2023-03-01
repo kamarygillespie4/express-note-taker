@@ -1,7 +1,7 @@
 # Express Note Taker
 
 ## Description
-This application can be used to take and save notes to be accessed later on..
+This application can be used to take and save notes to be accessed later on.
 
 ## Table of Contents
   1. [Installation Instructions](#installation)
